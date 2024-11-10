@@ -61,6 +61,9 @@
     <Compile Include="Registrationpage.xaml.cs">
       <DependentUpon>Registrationpage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Userprofile.xaml.cs">
+      <DependentUpon>Userprofile.xaml</DependentUpon>
+    </Compile>
     <Page Include="Forgotpassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,6 +81,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Registrationpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Userprofile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

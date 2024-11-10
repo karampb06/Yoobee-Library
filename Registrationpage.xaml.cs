@@ -1,81 +1,146 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
+
 using System.Windows.Controls;
 
+using System.Text.RegularExpressions;
 namespace login_and_register_page
 {
-    public partial class MainWindow : Window
+    public partial class RegisterWindow : Window
     {
-        public MainWindow()
+        public RegisterWindow()
         {
             InitializeComponent();
         }
 
-        // Event handler for the "Register" button click
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             string username = RegisterUsernameTextBox.Text;
             string email = RegisterEmailTextBox.Text;
-            string password = RegisterPasswordBox.Text;
-            string confirmPassword = RegisterConfirmPasswordBox.Text;
+            string password = RegisterPasswordBox.Password;
+            string confirmPassword = RegisterConfirmPasswordBox.Password;
 
-            // Basic validation for the fields
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) ||
-                string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
+            // Validate fields
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
             {
-                MessageBox.Show("All fields must be filled out.");
+                MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
+            // Validate email format
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email format.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Check if passwords match
             if (password != confirmPassword)
             {
-                MessageBox.Show("Passwords do not match.");
+                MessageBox.Show("Passwords do not match.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Here, you can add further logic to save the user data to a database or file
-            MessageBox.Show("Registration successful!");
+            // Attempt to register the user
+            if (RegisterUser(username, email, password))
+            {
+                // Show success message
+                MessageBoxResult result = MessageBox.Show("Registration successful! Do you want to log in now?", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // If the user clicks OK, open the login page and close the register window
+                if (result == MessageBoxResult.OK)
+                {
+                    // Create the LoginWindow instance and show it
+                    MainWindow loginWindow = new MainWindow();
+                    loginWindow.Show();
+
+                    // Close the current RegisterWindow
+                    this.Close();
+                }
+
+                // Clear fields after successful registration
+                RegisterUsernameTextBox.Clear();
+                RegisterEmailTextBox.Clear();
+                RegisterPasswordBox.Clear();
+                RegisterConfirmPasswordBox.Clear();
+            }
+            else
+            {
+                // If registration fails, show an error message
+                MessageBox.Show("Registration failed. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
-        // Event handler for when the RegisterUsernameTextBox gains focus
+
+        private bool RegisterUser(string username, string email, string password)
+
+        {
+
+            // Placeholder for actual registration logic (e.g., saving to a database)
+
+            return true;
+
+        }
+
+        private bool IsValidEmail(string email)
+
+        {
+
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            return Regex.IsMatch(email, emailPattern);
+
+        }
+
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+
         {
-            if (sender is TextBox textBox)
+
+            TextBox textBox = sender as TextBox;
+
+            if (textBox != null && textBox.Foreground == System.Windows.Media.Brushes.Gray)
+
             {
-                if (textBox.Text == "Enter Username" || textBox.Text == "Enter Email address" || textBox.Text == "Enter Password" || textBox.Text == "Confirm Password")
-                {
-                    textBox.Clear();
-                    textBox.Foreground = System.Windows.Media.Brushes.Black;
-                }
+
+                textBox.Text = "";
+
+                textBox.Foreground = System.Windows.Media.Brushes.Black;
+
             }
+
         }
 
-        // Event handler for when the RegisterUsernameTextBox loses focus
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+
         {
-            if (sender is TextBox textBox)
+
+            TextBox textBox = sender as TextBox;
+
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+
             {
-                if (string.IsNullOrWhiteSpace(textBox.Text))
+
+                textBox.Foreground = System.Windows.Media.Brushes.Gray;
+
+                if (textBox == RegisterUsernameTextBox)
+
                 {
-                    textBox.Foreground = System.Windows.Media.Brushes.Gray;
 
-                    // Default text based on the TextBox
-                    if (textBox.Name == "RegisterUsernameTextBox")
-                        textBox.Text = "Enter Username";
-                    else if (textBox.Name == "RegisterEmailTextBox")
-                        textBox.Text = "Enter Email address";
-                    else if (textBox.Name == "RegisterPasswordBox")
-                        textBox.Text = "Enter Password";
-                    else if (textBox.Name == "RegisterConfirmPasswordBox")
-                        textBox.Text = "Confirm Password";
+                    textBox.Text = "Enter User Name";
+
                 }
+
+                else if (textBox == RegisterEmailTextBox)
+
+                {
+
+                    textBox.Text = "Email Address";
+
+                }
+
             }
+
         }
 
-        // Event handler for the "Forgot password?" link
-        private void ForgotPassword_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Password recovery page (not implemented).");
-        }
     }
+
 }

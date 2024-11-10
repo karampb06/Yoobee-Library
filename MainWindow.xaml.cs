@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 
 namespace login_and_register_page
 {
@@ -11,44 +9,17 @@ namespace login_and_register_page
             InitializeComponent();
         }
 
-        // Handle the 'GotFocus' event for the Login Username TextBox
-        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (LoginUsernameTextBox.Text == "Enter Username / Email:")
-            {
-                LoginUsernameTextBox.Text = "";
-                LoginUsernameTextBox.Foreground = System.Windows.Media.Brushes.Black;
-            }
-        }
-
-        // Handle the 'LostFocus' event for the Login Username TextBox
-        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(LoginUsernameTextBox.Text))
-            {
-                LoginUsernameTextBox.Text = "Enter Username / Email:";
-                LoginUsernameTextBox.Foreground = System.Windows.Media.Brushes.Gray;
-            }
-        }
-
-        // Handle the Login Button Click Event
+        // Event handler for the Login button
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string username = LoginUsernameTextBox.Text;
-            string password = LoginPasswordBox.Text;
+            string password = LoginPasswordBox.Password;
 
-            // For this example, we will just check if the username and password are not empty.
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            // Check if login credentials are valid (you can replace this with actual validation logic)
-            if (username == "user@example.com" && password == "password123")
+            // Basic login validation (replace with your actual authentication logic)
+            if (ValidateCredentials(username, password))
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                // You can navigate to another window or perform additional actions here.
+                // Redirect to the main page or perform other post-login actions here
             }
             else
             {
@@ -56,11 +27,32 @@ namespace login_and_register_page
             }
         }
 
-        // Handle the Forgot Password link Click Event
+        // Simple validation for demo purposes, replace this with actual authentication logic
+        private bool ValidateCredentials(string username, string password)
+        {
+            // Example hardcoded credentials, replace with your actual authentication
+            return username == "admin" && password == "password";
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Your code for handling the button click event
+            MessageBox.Show("Button clicked!");
+        }
+
+        // Event handler for the Register button to open the registration page
+        private void RegisterAccount_Click(object sender, RoutedEventArgs e)
+        {
+            // Open the registration window
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();  
+            this.Close();
+        }
+
+        // Event handler for Forgot password link
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Redirecting to Forgot Password page...", "Forgot Password", MessageBoxButton.OK, MessageBoxImage.Information);
-            // Redirect the user to the Forgot Password page or logic here.
+            MessageBox.Show("Forgot password functionality is not implemented yet.", "Forgot Password", MessageBoxButton.OK, MessageBoxImage.Information);
+            // You can add a new window for resetting the password or redirect to a reset password page here
         }
     }
 }
