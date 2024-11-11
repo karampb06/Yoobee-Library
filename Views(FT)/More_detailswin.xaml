@@ -8,12 +8,14 @@
         Title="More_detailswin" Height="450" Width="800">
     <Grid>
         <!--Book Title-->
-        <TextBlock Text="Book Title: " FontFamily="Cooper Black" FontSize="40" Height="66" Margin="57,39,323,0" VerticalAlignment="Top"/>
-        <TextBlock Text="IT STARTS WITH US" FontFamily="Corbel" FontWeight="Bold" FontSize="25"
-                   Margin="304,52,266,338" />
-        
+        <TextBlock Text="Book Title: " FontFamily="Cooper Black" FontWeight="Bold" FontSize="40" Height="47" Margin="170,36,422,0" VerticalAlignment="Top"/>
+        <TextBlock Text="lOVE and RUIN" FontFamily="Corbel" FontWeight="Bold" FontSize="25"
+                   Margin="399,47,213,355" />
+
         <!--Book Author-->
-        <TextBlock Text="Book Author:" FontSize="40" FontFamily="Cooper Black" Margin="54,110,468,262"/>
-        <TextBlock Text="COLLEN HOOVER" FontFamily="Corbel" FontSize="25" FontWeight="Bold" Margin="365,123,157,252"/>
+        <TextBlock Text="Book Author:" FontSize="40" FontFamily="Cooper Black" FontWeight="Bold" Margin="172,95,350,277"/>
+        <TextBlock Text="PAULA MCLAIN" FontFamily="Corbel" FontSize="25" FontWeight="Bold" Margin="449,103,73,272"/>
+        <TextBlock Text="New York Times bestselling author of THE PARIS WIFE" FontSize="25" Foreground="Red" FontFamily="Cooper Black" FontWeight="Bold" Margin="68,167,38,219"/>
+
     </Grid>
 </Window>

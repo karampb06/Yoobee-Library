@@ -22,12 +22,18 @@ namespace login_and_register_page.Views_FT_
         public Home_pg()
         {
             InitializeComponent();
+            this.DataContext= this;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             More_detailswin p = More_detailswin();
             p.Show();
+        }
+
+        private More_detailswin More_detailswin()
+        {
+            throw new NotImplementedException();
         }
     }
 }
