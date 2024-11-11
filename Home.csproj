@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49A07B2E-2DC0-4160-AE3F-08A655A95CA3}</ProjectGuid>
+    <ProjectGuid>{648F7B83-F051-4CA7-B162-8DBA061BF35E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>login_and_register_page</RootNamespace>
-    <AssemblyName>login and register page</AssemblyName>
+    <RootNamespace>Home</RootNamespace>
+    <AssemblyName>Home</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,24 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Registrationpage.xaml.cs">
-      <DependentUpon>Registrationpage.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="ViewModels\MainWindowVM.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Views\Book_Catalog.xaml.cs">
+      <DependentUpon>Book_Catalog.xaml</DependentUpon>
     </Compile>
-    <Page Include="Registrationpage.xaml">
+    <Page Include="Views\Book_Catalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +90,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Home.csproj" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,7 +99,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.sln" />
+    <Folder Include="DataAcess\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\Pages\" />
+    <Folder Include="Views\Pages\" />
+    <Folder Include="Views\UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Book.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Admin ic.PNG" />
+    <Resource Include="Resources\Image\Book catalog.PNG" />
+    <Resource Include="Resources\Image\Book_checkout ic.PNG" />
+    <Resource Include="Resources\Image\Home ic.PNG" />
+    <Resource Include="Resources\Image\Member ic.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\NEWBOOKS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\New_Book.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
