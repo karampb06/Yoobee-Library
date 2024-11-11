@@ -58,6 +58,7 @@
     <Compile Include="Registrationpage.xaml.cs">
       <DependentUpon>Registrationpage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="testcode.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
