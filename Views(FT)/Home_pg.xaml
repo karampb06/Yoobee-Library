@@ -7,18 +7,61 @@
         mc:Ignorable="d"
         Title="Home_pg" Height="1094" Width="1929">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="344*"/>
+            <ColumnDefinition Width="1585*"/>
+        </Grid.ColumnDefinitions>
+        
         <!--HEADER CONTENT-->
-            <Rectangle Height="290" Width="1929" Fill="#393030" Margin="4,24,-4,764"/>
-        <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="486,136,-486,-136"/>
-        
+        <Rectangle Height="290" Width="1929" Fill="#393030" Margin="4,24,-4,764" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="146,136,-490,-136" Grid.Column="1"/>
+
         <!--IMAGES HEADER-->
-        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="28,45,1501,783"/>
-        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="1501,45,28,783"/>
-        
+        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="28,45,1501,783" Grid.ColumnSpan="2"/>
+        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="1157,45,28,783" Grid.Column="1"/>
+
+        <!--Add images lin below-->
+        <Image Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Book.jpg" Width="400" Height="230" Margin="32,53,1497,795" Grid.ColumnSpan="2"/>
+       
+        <!---Inner Home Page Content-->
+        <Rectangle Height="550" Width="1929" Fill="DarkGray" Margin="2,319,-2,209" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="lightgray" Height="470" Width="400" Margin="56,350,1473,258" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Monthly Book Releases" FontSize="40" FontWeight="Bold" Foreground="Black" FontFamily="Calibri" Margin="59,350,1470,646" Grid.ColumnSpan="2" />
+        <Rectangle Fill="LightGray" Height="470" Width="400" Margin="1152,346,33,262" Grid.Column="1"/>
+        <TextBlock Text="New Book!" FontSize="40" FontWeight="Bold" Foreground="Black" FontFamily="Calibri" Margin="1244,346,125,652" Grid.Column="1"/>
+        <Rectangle Height="450" Width="900" Fill="LightGray" Margin="170,360,515,268" Grid.Column="1"/>
+
         <!--FOOTER CONTENT-->
-        <Rectangle Width="1929" Height="200" Fill="#927C5C" Margin="0,875,0,3"/>
+        <Rectangle Width="1929" Height="200" Fill="#927C5C" Margin="0,875,0,3" Grid.ColumnSpan="2"/>
+
+        <!--Right Footer Content-->
+        <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="1046,896,39,32" Grid.Column="1"/>
+        <TextBlock Text="Big Shout out to our class! " FontSize="30" FontWeight="Bold" FontFamily="Calibri"
+                   Margin="1134,920,-108,75" Grid.Column="1" />
+        <TextBlock Text=" BSE/DSD Y1" FontSize="30" FontWeight="Bold" FontFamily="Calirbi"
+                   Margin="1216,985,140,50" Grid.Column="1"/>
+
+        <!--Left Footer Content-->
+        <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="33,902,1396,26" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Contact Us: 0800 123 456" FontSize="30" FontFamily="Calibri" Margin="117,978,1416,50" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Location: Symonds St, Auckland City" FontSize="30" 
+                   FontFamily="Calibri" Margin="51, 921, 1396, 114" Grid.ColumnSpan="2"/>
 
         <!--Icon Background-->
-        <Rectangle Width="800" Height="100" Fill="LightGray" Margin="564,39,565,939"/>
+        <Rectangle Width="800" Height="100" Fill="LightGray" Margin="232,43,553,935" Grid.Column="1"/>
+        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Admin ic.PNG" Margin="243,45,1209,943" Grid.Column="1"/>
+        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Member ic.PNG" Margin="402,44,1050,944" Grid.Column="1"/>
+        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Home ic.PNG" Margin="554,44,898,944" Grid.Column="1"/>
+        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Book catalog.PNG" Margin="722,43,730,945" Grid.Column="1"/>
+        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Book_checkout ic.PNG" Margin="887,43,565,945" Grid.Column="1"/>
+
+        <!--Inner home Page Images-->
+        <Image Height="380" Width="340" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\BOOKs.PNG"
+               Margin="89,404,1500,294" Grid.ColumnSpan="2"/>
+        <Image Height="380" Width="340" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\New_Book.png" Margin="1178,393,67,305" Grid.Column="1"/>
+   
+        <!--New Buttn - more information-->
+        <Button Content="more details..."  Foreground="DarkBlue"
+                Width="110" Height="30" Grid.Column="1" Margin="1442,780,33,268" Click="Button_Click"/>
     </Grid>
 </Window>

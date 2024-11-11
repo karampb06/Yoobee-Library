@@ -15,19 +15,10 @@ using System.Windows.Shapes;
 namespace login_and_register_page.Views_FT_
 {
     /// <summary>
-    /// Interaction logic for Home_pg.xaml
+    /// Interaction logic for More_detailswin.xaml
     /// </summary>
-    public partial class Home_pg : Window
+    public partial class More_detailswin : Window
     {
-        public Home_pg()
-        {
-            InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            More_detailswin p = More_detailswin();
-            p.Show();
-        }
+      
     }
 }
