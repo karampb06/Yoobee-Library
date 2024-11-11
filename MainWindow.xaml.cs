@@ -51,8 +51,12 @@ namespace login_and_register_page
         // Event handler for Forgot password link
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Forgot password functionality is not implemented yet.", "Forgot Password", MessageBoxButton.OK, MessageBoxImage.Information);
-            // You can add a new window for resetting the password or redirect to a reset password page here
+           
+            ForgotpasswordWindow forgotpasswordWindow = new ForgotpasswordWindow();
+            forgotpasswordWindow.Show();
+            this.Close();
+
+
         }
     }
 }

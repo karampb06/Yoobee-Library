@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Adminlogin.xaml.cs">
+      <DependentUpon>Adminlogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forgotpassword.xaml.cs">
       <DependentUpon>Forgotpassword.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,10 @@
     <Compile Include="Userprofile.xaml.cs">
       <DependentUpon>Userprofile.xaml</DependentUpon>
     </Compile>
+    <Page Include="Adminlogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forgotpassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
