@@ -18,7 +18,7 @@
 
         <!--HEADER CONTENT-->
         <Rectangle Height="290" Width="1929" Fill="#393030" Margin="4,24,-4,195" Grid.ColumnSpan="2"/>
-        <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="146,136,-490,-136" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="134,145,-478,-145" Grid.Column="1" Grid.RowSpan="2"/>
 
         <!--IMAGES HEADER-->
         <Rectangle Width="400" Height="250" Fill="LightGray" Margin="28,45,1501,214" Grid.ColumnSpan="2"/>
@@ -55,18 +55,26 @@
         <TextBlock Text="Location: Symonds St, Auckland City" FontSize="30" 
                    FontFamily="Calibri" FontWeight="Bold" Margin="51,412,1396,114" Grid.ColumnSpan="2" Grid.Row="1"/>
 
-        <!--Icon Background-->
+        <!--Icon Background (Rectangle)-->
         <Rectangle Width="800" Height="100" Fill="LightGray" Margin="232,43,553,366" Grid.Column="1"/>
-        <Image Height="90" Width="133" Source="Images/Admin ic.PNG" Margin="243,45,1209,374" Grid.Column="1"/>
-        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Member ic.PNG" Margin="402,44,1050,375" Grid.Column="1"/>
-        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Home ic.PNG" Margin="554,44,898,375" Grid.Column="1"/>
-        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Book catalog.PNG" Margin="722,43,730,376" Grid.Column="1"/>
-        <Image Height="90" Width="133" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Book_checkout ic.PNG" Margin="887,43,565,376" Grid.Column="1"/>
-
+        
+        <!--ADMIN ICON-->
+        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/456/456212.png" Margin="243,45,1209,374" Grid.Column="1"/>
+        
+        <!--MEMBER ICON-->
+        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/681/681494.png" Margin="402,44,1050,375" Grid.Column="1"/>
+        
+        <!--HOME ICON-->
+        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/25/25694.png" Margin="554,44,898,375" Grid.Column="1"/>
+        
+        <!--BOOK CATALOG ICON-->
+        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" Margin="722,43,730,376" Grid.Column="1"/>
+        
+        <!--BOOK CHECKOUT PROCESS ICON & TICK-->
+        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" Grid.Column="1" Margin="872,45,580,374"/>
+        <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Grid.Column="1" Margin="954,80,581,379"/>
+        
         <!--Inner home Page Images-->
-        <Image Height="380" Width="340" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\BOOKs.PNG"
-               Margin="89,404,1500,294" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <Image Height="380" Width="340" Source="C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\New_Book.png" Margin="1178,393,67,305" Grid.Column="1" Grid.RowSpan="2"/>
 
         <!--New Buttn - more information-->
 
@@ -84,7 +92,7 @@
 
         <!--Images - Monthly / New /-->
         <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110380/blog/book-recommendations-summer-2018-librarians-Love-and-Ruin.jpg "
-               Width="400" Height="400" Margin="1101,394,84,284" Grid.RowSpan="2" Grid.Column="1"/>
+               Width="400" Height="400" Margin="1106,394,79,284" Grid.Column="1" Grid.RowSpan="2"/>
         <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110381/blog/book-recommendations-summer-2018-librarians-That-Kind-of-Mother.jpg"
                Width="100" Height="400" Margin="70,300,174,378" Grid.RowSpan="2" />
         <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110383/blog/book-recommendations-summer-2018-librarians-The-Endless-Beach.jpg"
