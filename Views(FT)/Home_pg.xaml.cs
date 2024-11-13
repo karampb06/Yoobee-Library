@@ -25,6 +25,13 @@ namespace login_and_register_page.Views_FT_
             this.DataContext= this;
         }
 
+        void On_Click1(object sender, RoutedEventArgs e)
+        {
+            Button2.FontSize = 20;
+            Button2.Content = "ADMIN";
+            Button2.Background = Brushes.Red;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             More_detailswin p = More_detailswin();
