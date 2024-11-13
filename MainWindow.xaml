@@ -22,7 +22,7 @@
             </StackPanel>
 
             <!-- Right Image -->
-            <Image Source="https://cdn.pixabay.com/photo/2024/03/04/14/17/ai-generated-8612487_960_720.jpg" 
+            <Image Source="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg" 
                    HorizontalAlignment="Right" VerticalAlignment="Top" Height="120" Grid.Column="2" />
         </Grid>
 

@@ -44,6 +44,23 @@ namespace login_and_register_page
             }
         }
 
+        // Event handler for the "Back" button click
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+          
+            // Open the login window (MainWindow)
+          
+            MainWindow loginWindow = new MainWindow();
+            loginWindow.Show();
+            // Close the forgot password window
+            this.Close();
+        }
+       
+
+            
+        
+
+
         // Open the login window (MainWindow)
         private void MainWindow()
         {
