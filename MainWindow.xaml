@@ -27,11 +27,11 @@
         </Grid>
 
         <!-- Main Content Section -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="940" Height="367">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="940" Height="384">
             <TextBlock Text="Member Login" FontSize="20" FontWeight="Bold" Margin="0,20,0,20" TextAlignment="Center" Height="34" />
 
-            <Border Background="#D4D4D4" CornerRadius="10" Padding="20" Width="556" Height="275">
-                <StackPanel Margin="-10,0,0,-10">
+            <Border Background="#D4D4D4" CornerRadius="10" Padding="20" Width="556" Height="293">
+                <StackPanel Margin="-10,0,0,-26">
                     <!-- Username Heading and TextBox -->
                     <TextBlock Text="Username / Email" FontSize="16" FontWeight="SemiBold" Foreground="#333" Margin="0,5"/>
                     <TextBox x:Name="LoginUsernameTextBox" Width="525" Height="19"
@@ -49,7 +49,9 @@
                     <Button Content="Forgot Password" Click="ForgotPassword_Click" Width="196"/>
 
 
-                    <Button Content="Register account" Click="RegisterAccount_Click"  Background="WhiteSmoke" Width="161"  Margin="0,20" HorizontalAlignment="Right" />
+                    <Button Content="Register account" Click="RegisterAccount_Click"  Background="WhiteSmoke" Width="161"  Margin="0,20" HorizontalAlignment="Right" Height="21" />
+                    <!-- Admin Button -->
+                    <Button Content="Admin" Name="adminButton" HorizontalAlignment="Left" Background="DarkGray"  FontWeight="Bold" Margin="5" Width="154" Height="30" Click="AdminButton_Click"/>
 
                 </StackPanel>
             </Border>

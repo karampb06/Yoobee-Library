@@ -48,6 +48,18 @@ namespace login_and_register_page
             this.Close();
         }
 
+        // Event handler for the "Back" button click
+        private void AdminButton_Click (object sender, RoutedEventArgs e)
+        {
+
+            // Open the Adminlogin window (Admin login)
+
+            AdminloginWindow loginWindow = new AdminloginWindow();
+            loginWindow.Show();
+            // Close the forgot password window
+            this.Close();
+        }
+
         // Event handler for Forgot password link
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {

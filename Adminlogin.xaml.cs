@@ -36,6 +36,7 @@ namespace login_and_register_page
             }
         }
 
+
         // Event handler for Forgot Password link click
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
@@ -43,6 +44,17 @@ namespace login_and_register_page
             forgotpasswordWindow.Show();
             this.Close();
             
+        }
+
+        private void BackButton_Click (object sender, RoutedEventArgs e)
+        {
+
+            // Open the login window (login)
+
+            MainWindow loginWindow = new MainWindow();
+            loginWindow.Show();
+            // Close the forgot password window
+            this.Close();
         }
     }
 }

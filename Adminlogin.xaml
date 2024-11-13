@@ -25,7 +25,7 @@
             </StackPanel>
 
             <!-- Right Image -->
-            <Image Source="https://cdn.pixabay.com/photo/2024/03/04/14/17/ai-generated-8612487_960_720.jpg" 
+            <Image Source="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg" 
                    HorizontalAlignment="Right" VerticalAlignment="Top" Height="120" Grid.Column="2" />
         </Grid>
 
@@ -49,7 +49,9 @@
 
                     <!-- Login Button -->
                     <Button Content="Login" Width="200" Height="32" Background="#333" Margin="10" Foreground="White" HorizontalAlignment="Center" Click="LoginButton_Click" />
-                    <Button Content="Forgot password?" Foreground="#555" FontSize="12" MouseDown="ForgotPassword_Click" Margin="0,0" Width="204"/>
+                    <Button Content="Forgot password?" Foreground="#555" FontSize="12" Click="ForgotPassword_Click" Margin="0,0" Width="204"/>
+                    <Button Content="Back" Name="BackButton" HorizontalAlignment="Left" Background="DarkGray"  FontWeight="Bold" Margin="20" Width="154" Height="30" Click="BackButton_Click"/>
+
 
 
                 </StackPanel>
