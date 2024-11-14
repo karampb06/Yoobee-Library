@@ -7,10 +7,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
-
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition/>
+
+            <Grid.Row="0"  Background="#3D3D3D" Height="120" Margin="0,0,0,464">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                    <ColumnDefinition Width="80*" />
+                    <ColumnDefinition Width="63*" />
+                    <ColumnDefinition Width="37*"/>
+                </Grid.ColumnDefinitions>
+
+                <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -19,7 +28,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="newbookcloseBtn" Grid.Row="0" Content="X" Width="50" Height="55" FontSize="40" HorizontalAlignment="Right" Margin="0,0,20,0" Click="newbookcloseBtn_Click"  Background="Transparent" BorderThickness="0"/>
+        <Button x:Name="newbookcloseBtn" Grid.Row="1" Content="X" Width="50" Height="55" FontSize="40" HorizontalAlignment="Right" Margin="0,0,20,0" Click="newbookcloseBtn_Click"  Background="Transparent" BorderThickness="0"/>
         <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="New Book"/>
     </Grid>
 </UserControl>
