@@ -39,6 +39,10 @@
             </Image.RenderTransform>
         </Image>
 
+        <!--Icon Background (Rectangle)-->
+        <Rectangle Width="800" Height="100" Fill="LightGray" Margin="563,75,566,1009"/>
+
+
         <!--ADMIN ICON - BUTTON-->
         <Button Name="ADMIN_WIN" Height="50" Width="50" Click="Admin_Click"  Margin="632,72,1165,1022">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
@@ -66,6 +70,26 @@
         <!--Buttons - Filters-->
         <Button  Content="AVAILABLE" FontSize="50" FontFamily="Cooper Black" Width="500" Height="100" Margin="70,614,1359,470"/>
         <Button Content="NOT AVAILABLE" FontSize="50" Width="500" Height="100" Margin="70,746,1359,338" />
+
+        <!--HOME ICON-->
+        <Button x:Name="Button3" Width="133" Height="90" Click="Home_Click"  Margin="882,77,914,1017">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/25/25694.png">
+            </Image>
+        </Button>
+
+        <!--BOOK CATALOG BUTTON-->
+        <Button x:Name="Book_Catalog" Width="133" Height="90" Click="BookCatalog_Click" Margin="1042,81,754,1013">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" >
+            </Image>
+        </Button>
+
+        <!--BOOK CHECKOUT PROCESS BUTTON-->
+        <Button x:Name="Book_Checkout" Width="133" Height="98" Click="BookCheckout_Click" Margin="1207,74,589,1012" >
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png">
+            </Image>
+        </Button>
+
+        <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Margin="1289,135,590,1009"/>
 
 
         <!--IMAGE FOR HEADER-->
