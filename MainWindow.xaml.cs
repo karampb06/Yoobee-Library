@@ -31,7 +31,7 @@ namespace login_and_register_page
         private bool ValidateCredentials(string username, string password)
         {
             // Example hardcoded credentials, replace with your actual authentication
-            return username == "admin" && password == "password";
+            return username == "User" && password == "Password";
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
