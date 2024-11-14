@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Home.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,22 +26,34 @@ namespace login_and_register_page.Views_FT_
             this.DataContext= this;
         }
 
-        void On_Click1(object sender, RoutedEventArgs e)
+        //ADMIN WINDOW
+        
+
+        //MEMBER WINDOW
+
+
+        //BOOK CATALOG WINDOW
+        private void BookCatalog_Click(object sender, RoutedEventArgs e)
         {
-            Button2.FontSize = 20;
-            Button2.Content = "ADMIN";
-            Button2.Background = Brushes.Red;
+            Book_Catalog newWindow = new Book_Catalog();
+            newWindow.Show();
         }
 
+        //BOOK CHECKOUT WINDOW 
+        private void BookCheckout_Click(object sender, RoutedEventArgs e)
+        {
+            Book_Checkout newWindow = new Book_Checkout();
+            newWindow.Show();
+        }
+
+
+        //MORE DETAILS ABOUT BOOK WINDOW!
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            More_detailswin p = More_detailswin();
-            p.Show();
+            More_detailswin newWindow = More_detailswin();
+            newWindow.Show();
         }
 
-        private More_detailswin More_detailswin()
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }

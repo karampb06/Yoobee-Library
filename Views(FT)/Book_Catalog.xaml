@@ -9,12 +9,10 @@
     <Grid>
         <!--HEADER CONTENT-->
         <Rectangle Fill="#393030" Height="350" Width="1929" Margin="1,10,-1,824"/>
-        <Rectangle Width="700" Height="100" Fill="Gray" Margin="644,69,585,1015" />
+        <Rectangle Width="700" Height="100" Fill="Gray" Margin="644,75,585,1009" />
         <TextBlock FontFamily="Franklin Gothic" FontSize="120" Text="BOOK CATALOG" Foreground="White" Margin="567,204,525,846"/>
 
         <!--Image FOOTER CONTENT-->
-        <Image Source="D:\Users\270357713\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Admin ic.PNG"
-               Height="90" Width="133" Margin="632,72,1165,1022"/>
         <Image Source="D:\Users\270357713\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Member ic.PNG
                " Width="133" Height="90" Margin="758,73,1038,1021"/>
         <Image Source="D:\Users\270357713\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Resources\Images\Home ic.PNG" 
@@ -41,9 +39,17 @@
             </Image.RenderTransform>
         </Image>
 
+        <!--ADMIN ICON - BUTTON-->
+        <Button Name="ADMIN_WIN" Height="50" Width="50" Click="Admin_Click"  Margin="632,72,1165,1022">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <Image Source="https://cdn-icons-png.flaticon.com/128/456/456212.png" Height="50" Width="50"  Margin="632,72,1165,1022" />
+                <TextBlock Text="NewWindow" FontSize="10"/>
+            </StackPanel>
+        </Button>
+
         <!--DATA BINDING / Complete by 12/12/24 -->
         <!--USER CONTROL / Compelte on 12/12/24 -->
-        
+
         <!--FOOTER CONTENT-->
         <Rectangle Fill="#927C5C" Width="1929" Height="230" Margin="-6,948,6,6"/>
         <Rectangle Width="600" Height="200" Fill="LightGray" Margin="28,964,1301,20"/>
@@ -60,8 +66,8 @@
         <!--Buttons - Filters-->
         <Button  Content="AVAILABLE" FontSize="50" FontFamily="Cooper Black" Width="500" Height="100" Margin="70,614,1359,470"/>
         <Button Content="NOT AVAILABLE" FontSize="50" Width="500" Height="100" Margin="70,746,1359,338" />
-        
-        
+
+
         <!--IMAGE FOR HEADER-->
         <Image Source="https://cdn.pixabay.com/photo/2016/06/01/06/26/open-book-1428428_960_720.jpg" 
                Width="400" Height="230" Margin="44,79,1485,875"/>

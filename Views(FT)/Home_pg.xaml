@@ -60,26 +60,39 @@
         <!--Icon Background (Rectangle)-->
         <Rectangle Width="800" Height="100" Fill="LightGray" Margin="122,43,553,366" Grid.Column="2" Grid.ColumnSpan="2"/>
 
-        <!--ADMIN ICON & Button feature-->
-        <Button Name="Button1" Width="133" Height="90" Click="OnClick1" Grid.Column="2" Margin="135,47,148,372">
+        <!--ADMIN BUTTON !NOT AVAILABLE YET!-->
+        <Button x:Name="Button1" Width="133" Height="90" Click="Admin_Click" Grid.Column="2" Margin="133,47,150,372">
             <Image Source="https://cdn-icons-png.flaticon.com/128/456/456212.png">
             </Image>
 
         </Button>
+
+        <!--MEMBER BUTTON !NOT AVAILABLE YET!--> 
+        <Button x:Name="Button2" Width="133" Height="90" Click="Member_Click" Margin="292,47,1050,372" Grid.Column="2" Grid.ColumnSpan="2">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/681/681494.png">
+            </Image>
+        </Button> 
         
-        <Button Name="Button2" BorderBrush="Black">ADMIN</Button>
-
-        <!--MEMBER ICON-->
-        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/681/681494.png" Margin="292,44,1050,375" Grid.Column="2" Grid.ColumnSpan="2"/>
-
+        <!--2 Pages above need to be linked to team members pages (15/11/24)-->
+        
         <!--HOME ICON-->
-        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/25/25694.png" Margin="28,44,898,375" Grid.Column="3"/>
+        <Button x:Name="Button3" Width="133" Height="90" Click="Home_Click"  Margin="28,47,898,372" Grid.Column="3">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/25/25694.png">
+            </Image>
+        </Button>
 
-        <!--BOOK CATALOG ICON-->
-        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" Margin="196,43,730,376" Grid.Column="3"/>
+        <!--BOOK CATALOG BUTTON-->
+        <Button x:Name="Book_Catalog" Width="133" Height="90" Click="BookCatalog_Click" Margin="196,47,730,372" Grid.Column="3">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" >
+            </Image>
+        </Button>
 
-        <!--BOOK CHECKOUT PROCESS ICON & TICK-->
-        <Image Height="90" Width="133" Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" Grid.Column="3" Margin="346,45,580,374"/>
+        <!--BOOK CHECKOUT PROCESS BUTTON-->
+        <Button x:Name="Book_Checkout" Width="133" Height="98" Click="BookCheckout_Click" Grid.Column="3" Margin="346,45,580,374" >
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png">
+            </Image>
+        </Button>
+        
         <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Grid.Column="3" Margin="428,85,581,384"/>
 
         <!--Inner home Page Images-->
@@ -89,8 +102,8 @@
         <Button Content="more details..."  Foreground="DarkBlue"
                 Width="110" Height="30" Grid.Column="3" Margin="916,271,33,268" Click="Button_Click" Grid.Row="1"/>
 
-        
-        
+
+
         <!--DATA CONTEXT / Data binding-->
         <TextBox x:Name="Height" Height="30" Width="200" Margin="0,50,0,0"
                  Text="{Binding Height,Mode=TwoWay}" VerticalContentAlignment="Center"

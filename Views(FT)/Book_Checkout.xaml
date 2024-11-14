@@ -1,0 +1,40 @@
+﻿<Window x:Class="login_and_register_page.Views_FT_.Book_Checkout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:login_and_register_page.Views_FT_"
+        mc:Ignorable="d"
+        Title="Book_Checkout" Height="1094" Width="1929">
+    <Grid>
+        <!--HEADER CONTENT-->
+        <Rectangle Height="290" Width="1929" Fill="#393030" Margin="-10,48,10,740"/>
+        <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="496,148,442,760"/>
+
+        <!--IMAGES HEADER-->
+        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="10,68,1519,760"/>
+        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="1492,68,37,760"/>
+
+        <!--Add images lin below-->
+        <Image Source="https://cdn.pixabay.com/photo/2016/06/01/06/26/open-book-1428428_960_720.jpg" Width="400" Height="230" Margin="16,78,1513,770"/>
+        <Image Source="https://images.pexels.com/photos/207662/pexels-photo-207662.jpeg" Width="400" Height="230" Margin="1492,78,37,770"/>
+
+        <!--FOOTER CONTENT-->
+        <Rectangle Width="1929" Height="200" Fill="#927C5C" Margin="0,828,0,50"/>
+
+        <!--Right Footer Content-->
+        <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="1364,853,65,75"/>
+        <TextBlock Text="Big Shout out to our class! " FontSize="30" FontWeight="Bold" FontFamily="Calibri"
+                   Margin="1451,883,122,131" />
+        <TextBlock Text=" BSE/DSD Y1" FontSize="30" FontWeight="Bold" FontFamily="Calirbi"
+                   Margin="1545,948,159,67"/>
+
+        <!--Left Footer Content-->
+        <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="63,853,1366,75"/>
+        <TextBlock Text="Contact Us: 0800 123 456" FontSize="30" FontFamily="Calibri"
+                   FontWeight="Bold" Margin="138,928,1441,106"/>
+        <TextBlock Text="Location: Symonds St, Auckland City" FontSize="30" 
+                   FontFamily="Calibri" FontWeight="Bold" Margin="72,864,1288,150"/>
+
+    </Grid>
+</Window>
