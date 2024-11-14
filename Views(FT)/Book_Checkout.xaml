@@ -8,7 +8,7 @@
         Title="Book_Checkout" Height="1094" Width="1929">
     <Grid>
         <!--HEADER CONTENT-->
-        <Rectangle Height="290" Width="1929" Fill="#393030" Margin="-10,48,10,740"/>
+        <Rectangle Height="290" Width="1929" Fill="#393030" Margin="-28,34,28,754"/>
         <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="496,148,442,760"/>
 
         <!--IMAGES HEADER-->
@@ -28,6 +28,30 @@
                    Margin="1451,883,122,131" />
         <TextBlock Text=" BSE/DSD Y1" FontSize="30" FontWeight="Bold" FontFamily="Calirbi"
                    Margin="1545,948,159,67"/>
+
+        <!--Icon Background (Rectangle)-->
+        <Rectangle Width="800" Height="100" Fill="LightGray" Margin="547,64,582,914"/>
+
+        <!--HOME ICON-->
+        <Button x:Name="Button3" Width="133" Height="90" Click="Home_Click"  Margin="870,68,927,920">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/25/25694.png">
+            </Image>
+        </Button>
+
+        <!--BOOK CATALOG BUTTON-->
+        <Button x:Name="Book_Catalog" Width="133" Height="90" Click="BookCatalog_Click" Margin="1038,66,759,922">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" >
+            </Image>
+        </Button>
+
+        <!--BOOK CHECKOUT PROCESS BUTTON-->
+        <Button x:Name="Book_Checkout" Width="133" Height="98" Click="BookCheckout_Click" Margin="1189,65,607,915" >
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png">
+            </Image>
+        </Button>
+
+        <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Margin="1277,124,602,914"/>
+
 
         <!--Left Footer Content-->
         <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="63,853,1366,75"/>
