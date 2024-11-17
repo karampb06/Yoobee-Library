@@ -38,8 +38,8 @@
                 <TextBlock Text="User Account" FontSize="28" FontWeight="Bold" Foreground="White" TextAlignment="Center" Height="37"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0" Height="47">
                     <Button Width="50" Height="50" Style="{StaticResource IconButtonStyle}" Content="👤"/>
-                    <Button Width="50" Height="50" Style="{StaticResource IconButtonStyle}" Content="🏠"/>
-                    <Button Width="50" Height="50" Style="{StaticResource IconButtonStyle}" Content="📚"/>
+                    <Button Width="50" Height="50" Style="{StaticResource IconButtonStyle}" Content="🏠" Click="HomeButton_Click"/>
+                    <Button Width="50" Height="50" Style="{StaticResource IconButtonStyle}" Content="📚" Click="Button_Click"/>
                     <Button Width="63" Height="50"  Foreground="SkyBlue" Style="{StaticResource IconButtonStyle}" Content="📚✔️"/>
                 </StackPanel>
             </StackPanel>

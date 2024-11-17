@@ -70,5 +70,19 @@ namespace login_and_register_page
             this.Close();
 
         }
+
+       
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the Home page
+            Home_pg newWindow = new Home_pg();
+            newWindow.Show();
+
+            // Close the current  window
+            this.Close();
+        }
+
+        
     }
 }
