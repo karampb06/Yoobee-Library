@@ -69,17 +69,7 @@ namespace login_and_register_page
                 MessageBox.Show("Registration failed. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        // Event handler for the "Back" button click
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
 
-            // Create an instance of MainWindow and show it
-            MainWindow loginWindow = new MainWindow();
-            loginWindow.Show();
-
-            // Close the Registration page
-            this.Close();
-        }
 
         private bool RegisterUser(string username, string email, string password)
 
