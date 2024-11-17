@@ -26,8 +26,7 @@
         <Rectangle Width="400" Height="250" Fill="LightGray" Margin="28,45,26,214" Grid.ColumnSpan="2"/>
         <Rectangle Width="400" Height="250" Fill="LightGray" Margin="631,45,28,214" Grid.Column="3"/>
 
-        <!--New Book-->
-
+        <!--Inner Page Content-->
         <!--Add images lin below-->
         <Image Source="https://cdn.pixabay.com/photo/2016/06/01/06/26/open-book-1428428_960_720.jpg" Width="400" Height="230" Margin="32,53,22,226" Grid.ColumnSpan="2"/>
         <Image Source="https://images.pexels.com/photos/207662/pexels-photo-207662.jpeg" Width="400" Height="230" Margin="634,52,25,227" Grid.Column="3"/>
@@ -57,6 +56,7 @@
         <TextBlock Text="Location: Symonds St, Auckland City" FontSize="30" 
                    FontFamily="Calibri" FontWeight="Bold" Margin="51,412,337,114" Grid.ColumnSpan="3" Grid.Row="1"/>
 
+        <!--All Buttons (Left to Right ORDER)-->
         <!--Icon Background (Rectangle)-->
         <Rectangle Width="800" Height="100" Fill="LightGray" Margin="122,43,553,366" Grid.Column="2" Grid.ColumnSpan="2"/>
 
@@ -67,19 +67,16 @@
 
         </Button>
 
-        <!--MEMBER BUTTON !NOT AVAILABLE YET!--> 
+        <!--MEMBER BUTTON !NOT AVAILABLE YET!-->
         <Button x:Name="Button2" Width="133" Height="90" Click="Member_Click" Margin="292,47,1050,372" Grid.Column="2" Grid.ColumnSpan="2">
             <Image Source="https://cdn-icons-png.flaticon.com/128/681/681494.png">
             </Image>
-        </Button> 
-        
-        <!--2 Pages above need to be linked to team members pages (15/11/24)-->
-        
-        <!--HOME ICON-->
-        <Button x:Name="Button3" Width="133" Height="90" Click="Home_Click"  Margin="28,47,898,372" Grid.Column="3">
-            <Image Source="https://cdn-icons-png.flaticon.com/128/25/25694.png">
-            </Image>
         </Button>
+
+        <!--2 Pages above need to be linked to team members pages (18/11/24)-->
+
+        <!--HOME ICON ONLY-->
+        <Image Source="https://cdn-icons-png.flaticon.com/128/25/25694.png" Width="133" Height="90" Grid.Column="3" Margin="40,48,887,371"/>
 
         <!--BOOK CATALOG BUTTON-->
         <Button x:Name="Book_Catalog" Width="133" Height="90" Click="BookCatalog_Click" Margin="196,47,730,372" Grid.Column="3">
@@ -92,25 +89,17 @@
             <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png">
             </Image>
         </Button>
-        
+
         <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Grid.Column="3" Margin="428,85,581,384"/>
 
-        <!--Inner home Page Images-->
 
         <!--New Buttn - more information-->
-
         <Button Content="more details..."  Foreground="DarkBlue"
                 Width="110" Height="30" Grid.Column="3" Margin="916,271,33,268" Click="Button_Click" Grid.Row="1"/>
 
 
 
         <!--DATA CONTEXT / Data binding-->
-        <TextBox x:Name="Height" Height="30" Width="200" Margin="0,50,0,0"
-                 Text="{Binding Height,Mode=TwoWay}" VerticalContentAlignment="Center"
-                 HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBox x:Name="Width" Height="30" Width="200" Margin="0,100,0,0"
-                 Text="{Binding Width, Mode=TwoWay}" VerticalContentAlignment="Center" 
-                 HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <!--Images - Monthly / New /-->
         <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110380/blog/book-recommendations-summer-2018-librarians-Love-and-Ruin.jpg "
@@ -127,5 +116,8 @@
                Width="100" Height="400" Margin="206,494,38,184" Grid.RowSpan="2"/>
         <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110387/blog/book-recommendations-summer-2018-librarians-Something-in-the-Water-1.jpg"
                Width="100" Height="400" Grid.Column="1" Margin="2,492,8,186" Grid.RowSpan="2"/>
+
+        <!--Inner Page Content-->
+        <Image Source="https://i.postimg.cc/m2GWzGDW/YB-DESIGN.png" Margin="249,344,680,268" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" />
     </Grid>
 </Window>
