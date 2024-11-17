@@ -1,0 +1,123 @@
+﻿<Window x:Class="login_and_register_page.Views_FT_.Home_pg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:login_and_register_page.Views_FT_"
+        mc:Ignorable="d"
+        Title="Home_pg" Height="1094" Width="1929">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="509*"/>
+            <RowDefinition Height="569*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="344*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="416*"/>
+            <ColumnDefinition Width="1059*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--HEADER CONTENT-->
+        <Rectangle Height="290" Width="1929" Fill="#393030" Margin="4,24,-4,195" Grid.ColumnSpan="4"/>
+        <TextBlock Text="Yoobee Library" Foreground="White" FontFamily="Franklin Gothic SemiBold" FontSize="150" Margin="24,145,-478,-145" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <!--IMAGES HEADER-->
+        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="28,45,26,214" Grid.ColumnSpan="2"/>
+        <Rectangle Width="400" Height="250" Fill="LightGray" Margin="631,45,28,214" Grid.Column="3"/>
+
+        <!--Inner Page Content-->
+        <!--Add images lin below-->
+        <Image Source="https://cdn.pixabay.com/photo/2016/06/01/06/26/open-book-1428428_960_720.jpg" Width="400" Height="230" Margin="32,53,22,226" Grid.ColumnSpan="2"/>
+        <Image Source="https://images.pexels.com/photos/207662/pexels-photo-207662.jpeg" Width="400" Height="230" Margin="634,52,25,227" Grid.Column="3"/>
+
+        <!---Inner Home Page Content-->
+        <Rectangle Height="550" Width="1929" Fill="DarkGray" Margin="2,319,-2,209" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+        <Rectangle Fill="lightgray" Height="470" Width="400" Margin="56,350,414,258" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <TextBlock Text="Monthly Book Releases" FontSize="40" FontWeight="Bold" Foreground="Black" FontFamily="Calibri" Margin="59,350,411,77" Grid.ColumnSpan="3" />
+        <Rectangle Fill="LightGray" Height="470" Width="400" Margin="626,346,33,262" Grid.Column="3" Grid.RowSpan="2"/>
+        <TextBlock Text="New Book!" FontSize="40" FontWeight="Bold" Foreground="Black" FontFamily="Calibri" Margin="723,340,120,89" Grid.Column="3"/>
+        <Rectangle Height="450" Width="900" Fill="LightGray" Margin="60,360,515,268" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <!--FOOTER CONTENT-->
+        <Rectangle Width="1929" Height="200" Fill="#927C5C" Margin="0,366,0,3" Grid.ColumnSpan="4" Grid.Row="1"/>
+
+        <!--Right Footer Content-->
+        <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="520,387,39,32" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock Text="Big Shout out to our class! " FontSize="30" FontWeight="Bold" FontFamily="Calibri"
+                   Margin="608,411,-108,75" Grid.Column="3" Grid.Row="1" />
+        <TextBlock Text=" BSE/DSD Y1" FontSize="30" FontWeight="Bold" FontFamily="Calirbi"
+                   Margin="690,476,140,50" Grid.Column="3" Grid.Row="1"/>
+
+        <!--Left Footer Content-->
+        <Rectangle Width="500" Height="150" Fill="#D9D9D9D9" Margin="33,393,337,26" Grid.ColumnSpan="3" Grid.Row="1"/>
+        <TextBlock Text="Contact Us: 0800 123 456" FontSize="30" FontFamily="Calibri"
+                   FontWeight="Bold" Margin="117,469,357,50" Grid.ColumnSpan="3" Grid.Row="1"/>
+        <TextBlock Text="Location: Symonds St, Auckland City" FontSize="30" 
+                   FontFamily="Calibri" FontWeight="Bold" Margin="51,412,337,114" Grid.ColumnSpan="3" Grid.Row="1"/>
+
+        <!--All Buttons (Left to Right ORDER)-->
+        <!--Icon Background (Rectangle)-->
+        <Rectangle Width="800" Height="100" Fill="LightGray" Margin="122,43,553,366" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+        <!--ADMIN BUTTON !NOT AVAILABLE YET!-->
+        <Button x:Name="Button1" Width="133" Height="90" Click="Admin_Click" Grid.Column="2" Margin="133,47,150,372">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/456/456212.png">
+            </Image>
+
+        </Button>
+
+        <!--MEMBER BUTTON !NOT AVAILABLE YET!-->
+        <Button x:Name="Button2" Width="133" Height="90" Click="Member_Click" Margin="292,47,1050,372" Grid.Column="2" Grid.ColumnSpan="2">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/681/681494.png">
+            </Image>
+        </Button>
+
+        <!--2 Pages above need to be linked to team members pages (18/11/24)-->
+
+        <!--HOME ICON ONLY-->
+        <Image Source="https://cdn-icons-png.flaticon.com/128/25/25694.png" Width="133" Height="90" Grid.Column="3" Margin="40,48,887,371"/>
+
+        <!--BOOK CATALOG BUTTON-->
+        <Button x:Name="Book_Catalog" Width="133" Height="90" Click="BookCatalog_Click" Margin="196,47,730,372" Grid.Column="3">
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png" >
+            </Image>
+        </Button>
+
+        <!--BOOK CHECKOUT PROCESS BUTTON-->
+        <Button x:Name="Book_Checkout" Width="133" Height="98" Click="BookCheckout_Click" Grid.Column="3" Margin="346,45,580,374" >
+            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png">
+            </Image>
+        </Button>
+
+        <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Grid.Column="3" Margin="428,85,581,384"/>
+
+
+        <!--New Buttn - more information-->
+        <Button Content="more details..."  Foreground="DarkBlue"
+                Width="110" Height="30" Grid.Column="3" Margin="916,271,33,268" Click="Button_Click" Grid.Row="1"/>
+
+
+
+        <!--DATA CONTEXT / Data binding-->
+
+        <!--Images - Monthly / New /-->
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110380/blog/book-recommendations-summer-2018-librarians-Love-and-Ruin.jpg "
+               Width="400" Height="400" Margin="580,394,79,284" Grid.Column="3" Grid.RowSpan="2"/>
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110381/blog/book-recommendations-summer-2018-librarians-That-Kind-of-Mother.jpg"
+               Width="100" Height="400" Margin="70,300,174,378" Grid.RowSpan="2" />
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110383/blog/book-recommendations-summer-2018-librarians-The-Endless-Beach.jpg"
+               Width="100" Height="400" Margin="207,298,37,380" Grid.RowSpan="2" />
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110385/blog/book-recommendations-summer-2018-librarians-The-Ensemble.jpg"
+               Width="100" Height="400" Grid.ColumnSpan="2" Margin="342,299,12,379" Grid.RowSpan="2"/>
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110385/blog/book-recommendations-summer-2018-librarians-the-favorite-sister.jpg"
+               Width="100" Height="400" Margin="71,495,173,183" Grid.RowSpan="2"/>
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110386/blog/book-recommendations-summer-2018-librarians-How-Hard-Can-It-Be.jpg"
+               Width="100" Height="400" Margin="206,494,38,184" Grid.RowSpan="2"/>
+        <Image Source="https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584110387/blog/book-recommendations-summer-2018-librarians-Something-in-the-Water-1.jpg"
+               Width="100" Height="400" Grid.Column="1" Margin="2,492,8,186" Grid.RowSpan="2"/>
+
+        <!--Inner Page Content-->
+        <Image Source="https://i.postimg.cc/m2GWzGDW/YB-DESIGN.png" Margin="249,344,680,268" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>
