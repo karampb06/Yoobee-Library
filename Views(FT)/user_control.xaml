@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid x:Name="DataGrid" Margin="10,10,10,10" AutoGenerateColumns="True" />
-        <TextBox x:Name="SearchTextBox" Width="300" Height="70"  Margin="34,30,466,320" />
+        <TextBox x:Name="SearchTextBox" Width="300" Height="70"  Margin="31,45,469,335" />
         <Button Content="Search" Width="150" Height="70" Margin="348,45,302,335" Click="SearchButton_Click" />
     </Grid>
 </UserControl>
