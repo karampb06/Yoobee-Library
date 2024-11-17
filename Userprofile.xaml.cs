@@ -56,5 +56,19 @@ namespace login_and_register_page
         {
             return true; // Placeholder for actual update logic
         }
+
+        
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            // Create an instance of MainWindow and show it
+            MainWindow loginWindow = new MainWindow();
+            loginWindow.Show();
+
+            // Close the user page
+            this.Close();
+
+        }
     }
 }

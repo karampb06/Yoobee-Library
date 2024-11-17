@@ -19,7 +19,13 @@ namespace login_and_register_page
             if (ValidateCredentials(username, password))
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                // Redirect to the main page or perform other post-login actions here
+
+                // Navigate to the Home page
+                Home_pg newWindow = new Home_pg();
+                newWindow.Show();
+
+                // Close the current login window
+                this.Close();
             }
             else
             {

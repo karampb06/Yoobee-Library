@@ -56,9 +56,11 @@
                 <Button Content="Back" Name="BackButton" HorizontalAlignment="Left" Background="DarkGray"  FontWeight="Bold" Margin="10" Width="154" Height="30" Click="BackButton_Click"/>
 
                 <TextBlock Text="Issued" Foreground="Green" FontSize="20" FontWeight="Bold" Height="49"/>
-                <TextBlock Text="Overdue" Foreground="Red" FontSize="20" FontWeight="Bold" Margin="0,10,0,0" Height="56"/>
-                <TextBlock Text="Returns" Foreground="Orange" FontSize="20" FontWeight="Bold" Margin="0,10,0,0" Height="67"/>
+                <TextBlock Text="Overdue" Foreground="Red" FontSize="20" FontWeight="Bold" Margin="0,10,0,0" Height="37"/>
+                <TextBlock Text="Returns" Foreground="Orange" FontSize="20" FontWeight="Bold" Margin="0,10,0,0" Height="41"/>
                 <Button Content="Books History"  Width="136" Height="40" RenderTransformOrigin="0.488,5.188"/>
+                <Button Content="Logout" Name="LogoutButton" HorizontalAlignment="Right" Background="WhiteSmoke"  FontWeight="SemiBold" Margin="20" Width="154" Height="30" Click="LogoutButton_Click" RenderTransformOrigin="1.86,-0.569"/>
+
             </StackPanel>
         </Border>
 
@@ -80,6 +82,7 @@
                     <TextBlock Text="Password:" FontSize="17" FontWeight="Bold"/>
                     <PasswordBox x:Name="PasswordBox" Width="250" Margin="0,5,0,20" Height="25"/>
                     <Button Content="Update Changes" Width="150" FontSize="18" Height="40" Background="Black" Foreground="White"/>
+
                 </StackPanel>
 
                 <!-- Profile Icon -->
