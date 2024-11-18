@@ -34,9 +34,7 @@
                 <StackPanel Margin="-10,0,0,-26">
                     <!-- Username Heading and TextBox -->
                     <TextBlock Text="Username / Email" FontSize="16" FontWeight="SemiBold" Foreground="#333" Margin="0,5"/>
-                    <TextBox x:Name="LoginUsernameTextBox" Width="525" Height="19"
-                             VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
-                             Background="White" />
+                    <TextBox x:Name="LoginUsernameTextBox"  />
 
                     <!-- Password Heading and TextBox -->
                     <TextBlock Text="Password" FontSize="16" FontWeight="SemiBold" Foreground="#333" Margin="0,5"/>
