@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿
+using System.Windows;
 
 namespace login_and_register_page
 {
@@ -21,8 +22,8 @@ namespace login_and_register_page
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 // Navigate to the Home page
-                Home_pg newWindow = new Home_pg();
-                newWindow.Show();
+               // Home_pg newWindow = new Home_pg();
+              //  newWindow.Show();
 
                 // Close the current login window
                 this.Close();
@@ -50,12 +51,12 @@ namespace login_and_register_page
         {
             // Open the registration window
             RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show();  
+            registerWindow.Show();
             this.Close();
         }
 
         // Event handler for the "Back" button click
-        private void AdminButton_Click (object sender, RoutedEventArgs e)
+        private void AdminButton_Click(object sender, RoutedEventArgs e)
         {
 
             // Open the Adminlogin window (Admin login)
@@ -69,7 +70,7 @@ namespace login_and_register_page
         // Event handler for Forgot password link
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-           
+
             ForgotpasswordWindow forgotpasswordWindow = new ForgotpasswordWindow();
             forgotpasswordWindow.Show();
             this.Close();
