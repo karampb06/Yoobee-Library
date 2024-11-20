@@ -20,6 +20,8 @@ namespace login_and_register_page.Views_FT_
     /// </summary>
     public partial class Home_pg : Window
     {
+        private MainBook_Catalog newWindow;
+
         public Home_pg()
         {
             InitializeComponent();
@@ -43,7 +45,7 @@ namespace login_and_register_page.Views_FT_
         //BOOK CATALOG WINDOW
         private void BookCatalog_Click(object sender, RoutedEventArgs e)
         {
-            Book_Catalog newWindow = new Book_Catalog();
+            Main_bookCatalg_1_ newWindow = new Main_bookCatalg_1_();
             newWindow.Show();
         }
 
