@@ -19,13 +19,7 @@ namespace login_and_register_page
             if (ValidateCredentials(username, password))
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                // Navigate to the Home page
-                Home_pg newWindow = new Home_pg();
-                newWindow.Show();
-
-                // Close the current login window
-                this.Close();
+                // Redirect to the main page or perform other post-login actions here
             }
             else
             {
@@ -37,7 +31,7 @@ namespace login_and_register_page
         private bool ValidateCredentials(string username, string password)
         {
             // Example hardcoded credentials, replace with your actual authentication
-            return username == "User" && password == "Password";
+            return username == "admin" && password == "password";
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -50,31 +44,14 @@ namespace login_and_register_page
         {
             // Open the registration window
             RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show();  
-            this.Close();
-        }
-
-        // Event handler for the "Back" button click
-        private void AdminButton_Click (object sender, RoutedEventArgs e)
-        {
-
-            // Open the Adminlogin window (Admin login)
-
-            AdminloginWindow loginWindow = new AdminloginWindow();
-            loginWindow.Show();
-            // Close the forgot password window
-            this.Close();
+            registerWindow.ShowDialog();
         }
 
         // Event handler for Forgot password link
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-           
-            ForgotpasswordWindow forgotpasswordWindow = new ForgotpasswordWindow();
-            forgotpasswordWindow.Show();
-            this.Close();
-
-
+            MessageBox.Show("Forgot password functionality is not implemented yet.", "Forgot Password", MessageBoxButton.OK, MessageBoxImage.Information);
+            // You can add a new window for resetting the password or redirect to a reset password page here
         }
     }
 }

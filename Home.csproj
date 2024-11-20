@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49A07B2E-2DC0-4160-AE3F-08A655A95CA3}</ProjectGuid>
+    <ProjectGuid>{648F7B83-F051-4CA7-B162-8DBA061BF35E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>login_and_register_page</RootNamespace>
-    <AssemblyName>login and register page</AssemblyName>
+    <RootNamespace>Home</RootNamespace>
+    <AssemblyName>Home</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,86 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-<Compile Include="Registrationpage.xaml.cs">
-  <DependentUpon>Registrationpage.xaml</DependentUpon>
-</Compile>
-<Compile Include="Views\AdminPage.xaml.cs">
-  <DependentUpon>AdminPage.xaml</DependentUpon>
-</Compile>
-<Compile Include="Views\newBookUC.xaml.cs">
-  <DependentUpon>newBookUC.xaml</DependentUpon>
-</Compile>
-<Compile Include="Views\TextUC.xaml.cs">
-  <DependentUpon>TextUC.xaml</DependentUpon>
-</Compile>
-<Compile Include="Adminlogin.xaml.cs">
-  <DependentUpon>Adminlogin.xaml</DependentUpon>
-</Compile>
-<Compile Include="Forgotpassword.xaml.cs">
-  <DependentUpon>Forgotpassword.xaml</DependentUpon>
-</Compile>
-<Compile Include="..\Home_Page.xaml.cs">
-  <DependentUpon>Home_Page.xaml</DependentUpon>
-  <Link>Home_Page.xaml.cs</Link>
-</Compile>
-<Compile Include="Userprofile.xaml.cs">
-  <DependentUpon>Userprofile.xaml</DependentUpon>
-</Compile>
-<Compile Include="Views%28FT%29\Home_pg.xaml.cs">
-  <DependentUpon>Home_pg.xaml</DependentUpon>
-</Compile>
-<Compile Include="Views%28FT%29\More_detailswin.xaml.cs">
-  <DependentUpon>More_detailswin.xaml</DependentUpon>
-</Compile>
-<Page Include="MainWindow.xaml">
-  <Generator>MSBuild:Compile</Generator>
-  <SubType>Designer</SubType>
-</Page>
-<Compile Include="App.xaml.cs">
-  <DependentUpon>App.xaml</DependentUpon>
-  <SubType>Code</SubType>
-</Compile>
-<Compile Include="MainWindow.xaml.cs">
-  <DependentUpon>MainWindow.xaml</DependentUpon>
-  <SubType>Code</SubType>
-</Compile>
-<Page Include="Registrationpage.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="Views\AdminPage.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="Views\newBookUC.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="Views\TextUC.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="Adminlogin.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="Forgotpassword.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="..\Home_Page.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-  <Link>Home_Page.xaml</Link>
-</Page>
-<Page Include="Views%28FT%29\Home_pg.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
-<Page Include="Views%28FT%29\More_detailswin.xaml">
-  <SubType>Designer</SubType>
-  <Generator>MSBuild:Compile</Generator>
-</Page>
+    <Compile Include="ViewModels\MainWindowVM.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Book_Catalog.xaml.cs">
+      <DependentUpon>Book_Catalog.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Book_Catalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -154,7 +90,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Home.csproj" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,19 +99,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.sln" />
-    <Resource Include="Resources\Images\Admin ic.PNG" />
-    <Resource Include="Resources\Images\Book catalog.PNG" />
-    <Resource Include="Resources\Images\Book.jpg" />
-    <Resource Include="Resources\Images\BOOKs.PNG" />
-    <Resource Include="Resources\Images\Book_checkout ic.PNG" />
-    <Resource Include="Resources\Images\Home ic.PNG" />
-    <Resource Include="Resources\Images\New_Book.png" />
-    <Resource Include="Resources\Images\Member ic.PNG" />
-    <Content Include="Views%28FT%29\Home.sln" />
+    <Folder Include="DataAcess\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\Pages\" />
+    <Folder Include="Views\Pages\" />
+    <Folder Include="Views\UserControls\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Resource Include="Resources\Image\Book.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Admin ic.PNG" />
+    <Resource Include="Resources\Image\Book catalog.PNG" />
+    <Resource Include="Resources\Image\Book_checkout ic.PNG" />
+    <Resource Include="Resources\Image\Home ic.PNG" />
+    <Resource Include="Resources\Image\Member ic.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\NEWBOOKS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\New_Book.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
