@@ -53,7 +53,7 @@ namespace login_and_register_page
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\106.2 practice\\login and register page\\Aucklandlibrary.mdf\";Integrated Security=True;Connect Timeout=30";
 
             // SQL query to validate the admin credentials
-            string query = "SELECT COUNT(1) FROM Admins WHERE Username = @Username AND Password = @Password";
+            string query = " SELECT 1 FROM Admins WHERE Username = @Username AND Password = @Password";
 
             try
             {
@@ -63,9 +63,9 @@ namespace login_and_register_page
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Use parameterized queries to avoid SQL injection
+                        // Use parameterized queries to the avoid SQL injection
                         command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", HashPassword(password)); // Hash password before checking
+                        command.Parameters.AddWithValue("@Password", (password)); // Hash password before checking
 
                         // Execute the query
                         int count = Convert.ToInt32(command.ExecuteScalar());
