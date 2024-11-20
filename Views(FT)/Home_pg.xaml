@@ -84,14 +84,6 @@
             </Image>
         </Button>
 
-        <!--BOOK CHECKOUT PROCESS BUTTON-->
-        <Button x:Name="Book_Checkout" Width="133" Height="98" Click="BookCheckout_Click" Grid.Column="3" Margin="346,45,580,374" >
-            <Image Source="https://cdn-icons-png.flaticon.com/128/171/171322.png">
-            </Image>
-        </Button>
-
-        <Image Height="40" Width="50" Source="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" Grid.Column="3" Margin="428,85,581,384"/>
-
 
         <!--New Buttn - more information-->
         <Button Content="more details..."  Foreground="DarkBlue"

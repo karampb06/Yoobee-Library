@@ -47,12 +47,7 @@ namespace login_and_register_page.Views_FT_
             newWindow.Show();
         }
 
-        //BOOK CHECKOUT WINDOW 
-        private void BookCheckout_Click(object sender, RoutedEventArgs e)
-        {
-            Book_Checkout newWindow = new Book_Checkout();
-            newWindow.Show();
-        }
+
 
 
         //MORE DETAILS ABOUT BOOK WINDOW!
