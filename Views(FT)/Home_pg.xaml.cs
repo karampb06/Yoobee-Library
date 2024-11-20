@@ -34,7 +34,11 @@ namespace login_and_register_page.Views_FT_
         }
 
         //MEMBER WINDOW
-
+        private void MainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow newWindow = new MainWindow();
+            newWindow.Show();
+        }
 
         //BOOK CATALOG WINDOW
         private void BookCatalog_Click(object sender, RoutedEventArgs e)
