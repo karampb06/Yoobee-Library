@@ -1,21 +1,32 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Text;
+using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
-namespace Grid_View_filter_demo
+namespace login_and_register_page.Views_FT_
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for Main_bookCatalg_1_.xaml
+    /// </summary>
+    public partial class Main_bookCatalg_1_ : Window
     {
         List<Book> books;
-        public MainWindow()
+        public Main_bookCatalg_1_()
         {
             InitializeComponent();
 
             // Read the CSV file
-            var lines = File.ReadAllLines(@"C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\Grid View filter demo\Book(Sheet1).csv");
+            var lines = File.ReadAllLines(@"""C:\Users\FTael\OneDrive - UP Education\Documents\BSE Y1 - 2024\CS106 INTEGRATED STUDIO II\clone\Models\Book(Sheet1).csv");
 
             books = new List<Book>();
 
@@ -48,3 +59,4 @@ namespace Grid_View_filter_demo
         public string Book_Author { get; set; }
     }
 }
+
