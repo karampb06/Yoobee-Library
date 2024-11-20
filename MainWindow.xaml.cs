@@ -26,9 +26,13 @@ namespace login_and_register_page
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 // Navigate to the Home page
-                // Home_pg newWindow = new Home_pg();
-                // newWindow.Show();
+                //  Home_pg newWindow = new Home_pg();
+                //   newWindow.Show();
+                //  this.Close();
+                Userprofile newwindow = new Userprofile();
+                newwindow.Show();
                 this.Close();
+
             }
             else
             {
