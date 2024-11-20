@@ -61,9 +61,6 @@
     <Compile Include="Views\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BackUC.xaml.cs">
-      <DependentUpon>BackUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\newBookUC.xaml.cs">
       <DependentUpon>newBookUC.xaml</DependentUpon>
     </Compile>
@@ -87,10 +84,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdminPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BackUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

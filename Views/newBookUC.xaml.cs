@@ -92,7 +92,7 @@ namespace login_and_register_page.Views
 
                 // Notify the user that the book was added successfully
                 MessageBox.Show($"{name} has been added to the library");
-                this.Close();
+                this.NavigateToAdminPage();
             }
             catch (Exception ex)
             {
@@ -102,9 +102,22 @@ namespace login_and_register_page.Views
 
         }
 
-        private void newbookBackBtn_Click(object sender, RoutedEventArgs e)
+        private void NavigateToAdminPage()
         {
-            this.Close();
+            var parentWindow = Window.GetWindow(this);
+            if (parentWindow is MainWindow mainWindow)
+            {
+                mainWindow.Content = new AdminPage();
+            }
+            else
+            {
+                MessageBox.Show("Unable to navigate to AdminPage. Parent window not found.");
+            }
+        }
+
+        private void newbookclBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToAdminPage();
         }
 
 

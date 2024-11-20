@@ -24,5 +24,33 @@ namespace login_and_register_page.Views
         {
             InitializeComponent();
         }
+
+        private void viewBook_Click(object sender, RoutedEventArgs e)
+        {
+            LoadUserControl(new newBookUC());
+        }
+
+        private void addBook_Click(object sender, RoutedEventArgs e)
+        {
+            LoadUserControl(new newBookUC());
+        }
+
+        private void upBook_Click(object sender, RoutedEventArgs e)
+        {
+            LoadUserControl(new newBookUC());
+        }
+
+        private void LoadUserControl(UserControl userControl)
+        {
+            var parentWindow = Window.GetWindow(this);
+            if (parentWindow is MainWindow mainWindow)
+            {
+                mainWindow.Content = userControl; // Replace main content
+            }
+            else
+            {
+                MessageBox.Show("Unable to load the user control. Parent window not found.");
+            }
+        }
     }
 }
