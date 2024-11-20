@@ -27,7 +27,11 @@ namespace login_and_register_page.Views_FT_
         }
 
         //ADMIN WINDOW
-        
+        private void Admin_click(object sender, RoutedEventArgs e)
+        {
+            Adminlogin newWindow = new Adminlogin();
+            newWindow.Show();
+        }
 
         //MEMBER WINDOW
 
@@ -50,7 +54,7 @@ namespace login_and_register_page.Views_FT_
         //MORE DETAILS ABOUT BOOK WINDOW!
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            More_detailswin newWindow = More_detailswin();
+            More_detailswin newWindow =  new More_detailswin();
             newWindow.Show();
         }
 
