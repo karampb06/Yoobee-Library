@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace login_and_register_page
+namespace login_and_register_page.Views
 {
     /// <summary>
-    /// Interaction logic for adminPage.xaml
+    /// Interaction logic for AdminPage.xaml
     /// </summary>
-    public partial class adminPage : UserControl
+    public partial class AdminPage : Window
     {
-        public adminPage()
+        public AdminPage()
         {
             InitializeComponent();
         }
