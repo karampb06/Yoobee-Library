@@ -32,8 +32,9 @@ namespace Grid_View_filter_demo
             booksList.ItemsSource = books;
         }
 
+        //class for SearchBar control - (user enters)
         private void searchBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {                           //Query - LINQ 
             booksList.ItemsSource = (from b in books
                                      where !(b.Book_Title.IndexOf(searchBar.Text, StringComparison.OrdinalIgnoreCase) < 0 &&
                                              b.Book_Author.IndexOf(searchBar.Text, StringComparison.OrdinalIgnoreCase) < 0)
