@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using login_and_register_page.Views;
 
 namespace login_and_register_page.Views
 {
@@ -23,8 +24,6 @@ namespace login_and_register_page.Views
     {
         public newBookUC()
         {
-            InitializeComponent();
-
             InitializeComponent();
 
             TextUC nameText = makeText("Name");
@@ -39,10 +38,6 @@ namespace login_and_register_page.Views
             setGrid(collectionText, 5, newGrid);
             Grid.SetRow(addBookBtn, 6);
             newGrid.Children.Add(addBookBtn);
-
-
-
-
         }
 
 
@@ -95,17 +90,19 @@ namespace login_and_register_page.Views
                     }
                 }
 
+                // Notify the user that the book was added successfully
                 MessageBox.Show($"{name} has been added to the library");
                 this.Close();
             }
             catch (Exception ex)
             {
+                // Handle any errors
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
 
         }
 
-        private void newbookcloseBtn_Click(object sender, RoutedEventArgs e)
+        private void newbookBackBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

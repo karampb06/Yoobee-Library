@@ -25,7 +25,6 @@ namespace login_and_register_page.Views
             InitializeComponent();
         }
 
-
         public string Text
         {
             get { return txtInput.Text; }
@@ -60,7 +59,6 @@ namespace login_and_register_page.Views
                 tbPlaceHolder.Visibility = Visibility.Hidden;
             }
         }
-
 
     }
 }

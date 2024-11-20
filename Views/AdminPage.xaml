@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:login_and_register_page.Views"
         mc:Ignorable="d"
-        Title="AdminPage" Height="450" Width="800">
-    <Grid>
+        Title="AdminPage" Height="590" Width="874">
+    <Grid Background="#F0F0F0">
 
         <Grid Background="#3D3D3D" Height="94" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -42,7 +42,7 @@
                 </StackPanel>
 
                 <TextBlock Text="Admin Account" FontSize="24" FontWeight="Bold" Foreground="White" 
-               VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="54" Width="185"/>
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="54" Width="185"/>
 
             </Grid>
 
@@ -82,10 +82,11 @@
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
             <TextBlock Text="Location: XX Symonds St, Auckland City&#10;Contact us: 0800 225 902" 
-               FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Margin="54,0,0,0"/>
+                       FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Margin="54,0,0,0"/>
             <TextBlock Text="Big Shout out to our Class!&#10;BSE Y1 - 2024" 
-               FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2"/>
+                       FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2"/>
         </Grid>
+
 
 
     </Grid>

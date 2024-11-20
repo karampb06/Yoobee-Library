@@ -5,17 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:login_and_register_page.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="250">
+             d:DesignHeight="50" d:DesignWidth="450">
     <Grid Background="White">
 
         <TextBox x:Name="txtInput" VerticalContentAlignment="Center" FontSize="16" FontWeight="Light"
-         Background="Transparent" TextChanged="txtInput_TextChanged" />
+                 Background="Transparent" TextChanged="txtInput_TextChanged" />
         <TextBlock x:Name="tbPlaceHolder" Text="{Binding PlaceHolder}" FontSize="16" FontWeight="Light"
-    Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0"
-           Panel.ZIndex="-1"/>
+            Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0"
+                   Panel.ZIndex="-1"/>
         <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X"
-        Background="Transparent" BorderThickness="0" Click="btnClear_Click"/>
-
+                Background="Transparent" BorderThickness="0" Click="btnClear_Click"/>
 
     </Grid>
 </UserControl>

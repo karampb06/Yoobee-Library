@@ -12,20 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using login_and_register_page.Views;
 
 namespace login_and_register_page.Views
 {
     /// <summary>
-    /// Interaction logic for ExitBtnUC.xaml
+    /// Interaction logic for BackUC.xaml
     /// </summary>
-    public partial class ExitBtnUC : UserControl
+    public partial class BackUC : UserControl
     {
-        public ExitBtnUC()
+        public BackUC()
         {
             InitializeComponent();
         }
 
-        private void closeBtn_Click(object sender, RoutedEventArgs e)
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             Window parentWindow = Window.GetWindow(this);
             if (parentWindow != null)
@@ -33,6 +35,5 @@ namespace login_and_register_page.Views
                 parentWindow.Close();
             }
         }
-
     }
 }
