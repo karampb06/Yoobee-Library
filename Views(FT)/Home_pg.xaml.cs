@@ -29,7 +29,7 @@ namespace login_and_register_page.Views_FT_
         }
 
         //ADMIN WINDOW
-        private void Admin_click(object sender, RoutedEventArgs e)
+        private void Admin_Click(object sender, RoutedEventArgs e)
         {
             Views.AdminPage newWindow = new Views.AdminPage();
             newWindow.Show();
