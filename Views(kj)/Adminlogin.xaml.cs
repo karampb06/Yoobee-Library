@@ -13,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using login_and_register_page.Views_kj_;
+
 
 namespace login_and_register_page.Views_kj_
 {
