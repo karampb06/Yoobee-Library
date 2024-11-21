@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views%28FT%29\Main_bookCatalg%281%29.xaml.cs">
+      <DependentUpon>Main_bookCatalg%281%29.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views%28kj%29\Adminlogin.xaml.cs">
       <DependentUpon>Adminlogin.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views%28FT%29\Main_bookCatalg%281%29.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views%28kj%29\Adminlogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

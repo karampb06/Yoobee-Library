@@ -1,4 +1,4 @@
-﻿using Home.Views;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace login_and_register_page.Views_FT_
     /// </summary>
     public partial class Home_pg : Window
     {
-        private MainBook_Catalog newWindow;
+       // private MainBook_Catalog newWindow;
 
         public Home_pg()
         {
@@ -31,7 +31,7 @@ namespace login_and_register_page.Views_FT_
         //ADMIN WINDOW
         private void Admin_click(object sender, RoutedEventArgs e)
         {
-            Adminlogin newWindow = new Adminlogin();
+            Views.AdminPage newWindow = new Views.AdminPage();
             newWindow.Show();
         }
 
