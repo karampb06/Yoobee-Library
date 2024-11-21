@@ -67,7 +67,8 @@ namespace login_and_register_page.Views_kj_
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\106.2 practice\\login and register page\\Aucklandlibrary.mdf\";Integrated Security=True;Connect Timeout=30";
 
             // SQL query to validate the admin credentials
-            string query = " SELECT 1 FROM Admins WHERE Username = @Username AND Password = @Password";
+            string query = "SELECT 1 FROM Admins WHERE Username = @Username AND PasswordHash = @PasswordHash";
+
 
             try
             {
