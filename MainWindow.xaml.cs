@@ -1,4 +1,9 @@
-﻿using System.Windows;
+﻿using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
+using System;
+using System.Windows;
+using login_and_register_page.Views_kj_;
 
 namespace login_and_register_page
 {
@@ -8,28 +13,91 @@ namespace login_and_register_page
         {
             InitializeComponent();
         }
-
         // Event handler for the Login button
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            // Get username and password from input fields
             string username = LoginUsernameTextBox.Text;
             string password = LoginPasswordBox.Password;
 
-            // Basic login validation (replace with your actual authentication logic)
-            if (ValidateCredentials(username, password))
+            // Validate credentials against the database
+            if (ValidateCredentialsFromDatabase(username, password))
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-
                 // Navigate to the Home page
-                Home_pg newWindow = new Home_pg();
-                newWindow.Show();
-
-                // Close the current login window
+                //  Home_pg newWindow = new Home_pg();
+                //   newWindow.Show();
+                //  this.Close();
+                Userprofile newwindow = new Userprofile();
+                newwindow.Show();
                 this.Close();
+
             }
             else
             {
                 MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /// <summary>
+        /// Validates the user's credentials by checking the database.
+        /// </summary>
+        /// <param name="username">The entered username</param>
+        /// <param name="password">The entered password</param>
+        /// <returns>True if credentials are valid, otherwise false</returns>
+        private bool ValidateCredentialsFromDatabase(string username, string password)
+        {
+            bool isValid = false;
+
+            // Database connection string (replace with your actual connection string)
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\106.2 practice\\login and register page\\Aucklandlibrary.mdf\";Integrated Security=True;Connect Timeout=30";
+
+            // SQL query to retrieve user credentials
+            string query = "SELECT Password FROM Users WHERE UserName = @UserName";
+
+            try
+            {
+                // Connect to the database
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Create a SQL command
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameter to prevent SQL injection
+                        command.Parameters.AddWithValue("@UserName", username);
+
+                        // Execute the query and read the result
+                        object dbPassword = command.ExecuteScalar();
+
+                        if (dbPassword != null)
+                        {
+                            // Hash the entered password and compare it to the stored password
+                            string hashedPassword = HashPassword(password); // Hashing the entered password
+                            if (hashedPassword == dbPassword.ToString()) // Replace with proper hashing comparison
+                            {
+                                isValid = true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while accessing the database: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return isValid;
+        }
+
+        // Hashes a password using SHA256
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return Convert.ToBase64String(bytes);
             }
         }
 
@@ -49,18 +117,18 @@ namespace login_and_register_page
         private void RegisterAccount_Click(object sender, RoutedEventArgs e)
         {
             // Open the registration window
-            RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show();  
+            Registrationpage registerWindow = new Registrationpage();
+            registerWindow.Show();
             this.Close();
         }
 
         // Event handler for the "Back" button click
-        private void AdminButton_Click (object sender, RoutedEventArgs e)
+        private void AdminButton_Click(object sender, RoutedEventArgs e)
         {
 
             // Open the Adminlogin window (Admin login)
 
-            AdminloginWindow loginWindow = new AdminloginWindow();
+            Adminlogin loginWindow = new Adminlogin();
             loginWindow.Show();
             // Close the forgot password window
             this.Close();
@@ -69,8 +137,8 @@ namespace login_and_register_page
         // Event handler for Forgot password link
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-           
-            ForgotpasswordWindow forgotpasswordWindow = new ForgotpasswordWindow();
+
+            Forgotpassword forgotpasswordWindow = new Forgotpassword();
             forgotpasswordWindow.Show();
             this.Close();
 

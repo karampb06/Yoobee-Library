@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views%28kj%29\Adminlogin.xaml.cs">
+      <DependentUpon>Adminlogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views%28kj%29\Forgotpassword.xaml.cs">
+      <DependentUpon>Forgotpassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views%28kj%29\Registrationpage.xaml.cs">
+      <DependentUpon>Registrationpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views%28kj%29\Userprofile.xaml.cs">
+      <DependentUpon>Userprofile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
@@ -86,6 +98,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views%28kj%29\Adminlogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views%28kj%29\Forgotpassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views%28kj%29\Registrationpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views%28kj%29\Userprofile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
