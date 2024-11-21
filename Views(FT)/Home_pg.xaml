@@ -68,7 +68,7 @@
         </Button>
 
         <!--MEMBER BUTTON !NOT AVAILABLE YET!-->
-        <Button x:Name="Button2" Width="133" Height="90" Click="Member_Click" Margin="292,47,1050,372" Grid.Column="2" Grid.ColumnSpan="2">
+        <Button x:Name="Button2" Width="133" Height="90" Click="MainWindow_Click" Margin="292,47,1050,372" Grid.Column="2" Grid.ColumnSpan="2">
             <Image Source="https://cdn-icons-png.flaticon.com/128/681/681494.png">
             </Image>
         </Button>
