@@ -1,11 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using login_and_register_page.Views_ks_;
 
-namespace login_and_register_page
+
+namespace login_and_register_page.Views_ks_
 {
-    public partial class ForgotpasswordWindow : Window
+    /// <summary>
+    /// Interaction logic for Forgotpassword.xaml
+    /// </summary>
+    public partial class Forgotpassword : Window
     {
-        public ForgotpasswordWindow()
+        public Forgotpassword()
         {
             InitializeComponent();
         }
@@ -35,7 +51,7 @@ namespace login_and_register_page
                 {
                     MainWindow(); // Open the login window
                     this.Close();  // Close the forgot password window
-                     
+
                 }
             }
             else
@@ -47,25 +63,27 @@ namespace login_and_register_page
         // Event handler for the "Back" button click
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-          
+
             // Open the login window (MainWindow)
-          
+
             MainWindow loginWindow = new MainWindow();
             loginWindow.Show();
             // Close the forgot password window
             this.Close();
         }
-       
 
-            
-        
+
+
+
 
 
         // Open the login window (MainWindow)
         private void MainWindow()
         {
-            MainWindow MainWindow  = new MainWindow();
+            MainWindow MainWindow = new MainWindow();
             MainWindow.Show();  // Show the login window
         }
+
+
     }
 }

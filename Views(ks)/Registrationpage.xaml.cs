@@ -1,21 +1,34 @@
-﻿using System.Windows;
-
-using System.Windows.Controls;
-
-using System.Text.RegularExpressions;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using login_and_register_page.Views_ks_;
 
-namespace login_and_register_page
+
+namespace login_and_register_page.Views_ks_
 {
-    public partial class RegisterWindow : Window
+    /// <summary>
+    /// Interaction logic for Registrationpage.xaml
+    /// </summary>
+    public partial class Registrationpage : Window
     {
-        public RegisterWindow()
+        public Registrationpage()
         {
             InitializeComponent();
         }
+
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
@@ -166,5 +179,6 @@ namespace login_and_register_page
                 }
             }
         }
+
     }
 }

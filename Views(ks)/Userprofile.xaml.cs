@@ -1,12 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
-using System.Windows;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using login_and_register_page.Views_ks_;
 
-namespace login_and_register_page
+
+namespace login_and_register_page.Views_ks_
 {
+    /// <summary>
+    /// Interaction logic for Userprofile.xaml
+    /// </summary>
     public partial class Userprofile : Window
     {
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\106.2 practice\\login and register page\\Aucklandlibrary.mdf\";Integrated Security=True;Connect Timeout=30"; // Set your database connection string here
@@ -16,6 +31,7 @@ namespace login_and_register_page
             InitializeComponent();
             LoadUserProfile();
         }
+
 
         // Load the current user profile details when the profile page is opened
         private void LoadUserProfile()
@@ -161,17 +177,19 @@ namespace login_and_register_page
         {
 
             //Navigate to the Home page
-          //  Home_pg newWindow = new Home_pg();
-           //newWindow.Show();
+            //  Home_pg newWindow = new Home_pg();
+            //newWindow.Show();
 
-           //  Close the current  window
+            //  Close the current  window
             //this.Close();
-           
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //
         }
+
+
     }
 }

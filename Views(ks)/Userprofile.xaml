@@ -1,11 +1,11 @@
-﻿<Window x:Class="login_and_register_page.Userprofile"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:login_and_register_page"
-             mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+﻿<Window x:Class="login_and_register_page.Views_ks_.Userprofile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:login_and_register_page.Views_ks_"
+        mc:Ignorable="d"
+        Title="Userprofile"  d:DesignHeight="600" d:DesignWidth="1000">
     <Window.Resources>
         <!-- Style for Navigation Buttons -->
         <Style x:Key="IconButtonStyle" TargetType="Button">
@@ -123,3 +123,4 @@
     </Grid>
 
 </Window>
+

@@ -1,15 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using login_and_register_page.Views_ks_;
 
-namespace login_and_register_page
+
+namespace login_and_register_page.Views_ks_
 {
-    public partial class AdminloginWindow : Window
+    /// <summary>
+    /// Interaction logic for Adminlogin.xaml
+    /// </summary>
+    public partial class Adminlogin : Window
     {
-        public AdminloginWindow()
+        public Adminlogin()
         {
             InitializeComponent();
         }
@@ -96,7 +110,7 @@ namespace login_and_register_page
         // Event handler for Forgot Password link click
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-            ForgotpasswordWindow forgotpasswordWindow = new ForgotpasswordWindow();
+            Forgotpassword forgotpasswordWindow = new Forgotpassword();
             forgotpasswordWindow.Show();
             this.Close();
         }
@@ -109,5 +123,6 @@ namespace login_and_register_page
             // Close the current window
             this.Close();
         }
+
     }
 }
