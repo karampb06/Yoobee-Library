@@ -76,6 +76,9 @@
     <Compile Include="Views\newBookUC.xaml.cs">
       <DependentUpon>newBookUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\newMemberUC.xaml.cs">
+      <DependentUpon>newMemberUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TextUC.xaml.cs">
       <DependentUpon>TextUC.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\newBookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\newMemberUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
