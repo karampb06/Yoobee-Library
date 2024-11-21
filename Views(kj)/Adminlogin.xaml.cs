@@ -80,7 +80,7 @@ namespace login_and_register_page.Views_kj_
                     {
                         // Use parameterized queries to the avoid SQL injection
                         command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@PasswordHash", HashPassword(password)); // Hash password before checking
+                        command.Parameters.AddWithValue("@Password", (password)); // Hash password before checking
 
                         // Execute the query
                         int count = Convert.ToInt32(command.ExecuteScalar());
